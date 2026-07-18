@@ -1,0 +1,6 @@
+# SSH Client Configuration
+# Configures the SSH client to use a specific identity file and disable password authentication.
+
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
