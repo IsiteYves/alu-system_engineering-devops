@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Fixes Nginx to listen on port 80 short and sweet
-sed -i 's/listen [0-9]*;/listen 80;/g' /etc/nginx/sites-available/default
-service nginx restart
+# Fix Nginx port without service manager or trailing semicolons
+sed -i 's/8080/80/' /etc/nginx/sites-available/default
+/usr/sbin/nginx
