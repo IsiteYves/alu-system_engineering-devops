@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Fix Nginx port without service manager or trailing semicolons
+# Fix Nginx port, stop init service, launch process directly
+service nginx stop
 sed -i 's/8080/80/' /etc/nginx/sites-available/default
-/usr/sbin/nginx
+nginx
