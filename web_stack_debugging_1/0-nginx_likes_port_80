@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Starts the Nginx web server
+# nginx likes port 80
 
-service nginx start
+# configuring nginx
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
