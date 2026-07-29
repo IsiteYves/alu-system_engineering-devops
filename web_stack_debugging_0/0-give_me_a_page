@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Fixes Apache server to serve 'Hello Holberton' page on root query
+
+# 1. Write 'Hello Holberton' to the default Apache index page
+echo "Hello Holberton" | sudo tee /var/www/html/index.html > /dev/null
+
+# 2. Ensure Apache service is started / restarted
+sudo service apache2 restart
